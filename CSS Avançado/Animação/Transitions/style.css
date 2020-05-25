@@ -1,0 +1,24 @@
+@keyframes move {
+    from {margin-left: -120px;}
+    to {margin-left: 0px}
+}
+
+.btn {
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    background: #428bca;
+    padding: 20px;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 1.5s;
+
+    transition-property: background-color, padding;
+    transition-duration: 0.2s;
+}
+
+.btn:hover {
+    background-color: #2245CA;
+    padding-left: 30px;
+    padding-right: 30px;
+}

@@ -1,0 +1,27 @@
+/* *{Seleciona todos os elementos} */
+
+/* Todas as DIV e P */
+div, p{}
+
+/* Todos os P dentro da DIV */
+div p{}
+
+/* Apenas os P q tem DIV como pai */
+div > p{}
+
+/* Seleciona P logo após o DIV no html */
+div + p{}
+
+/* Seleciona todos os elementos P que sucedem a DIV */
+div ~ p{}
+
+/* Seleciona todos os elementos que tem tal atributo. 
+Ex: */
+[width]{}
+
+/* Seleciona apenas os elementos que tem tal atributo="valor". 
+Ex: */
+[width="500"]{}
+
+
+/* Mais no Script  */

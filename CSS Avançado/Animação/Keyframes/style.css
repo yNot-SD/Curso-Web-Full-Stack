@@ -1,0 +1,59 @@
+
+@keyframes changeColorInicioEfim {
+    
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+@keyframes changeColorComPorcentagem {
+    
+    0% {background-color: red;}
+    25% {background-color: purple;}
+    50% {background-color: orange;}
+    100% {background-color: blue;}
+}
+
+
+@keyframes changeColorPropriedadesAlteradas {
+    /*Funciona tanto com porcentagem como com From - To*/
+    from {background-color: red; width: 200px;}
+    to {background-color: blue; width: 250px;}
+}
+
+
+.box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColorPropriedadesAlteradas;
+    animation-duration: 2s;
+
+    /*
+    Essa propriedade atrasa a execução da animação,
+    ou se colocado em negativo, acelera a animação
+    até cortando uma parte dela. (animation-delay)
+    */
+    animation-delay: 0s;
+
+    /*
+    animation-iteration-count: pode colocar o numero de
+    vezes que irá repetir ou colocar infinite, para não parar
+    */
+    animation-iteration-count: 2;
+    
+    /*
+    animation-direction:
+    Essa propriedade reverte a sequencia da exeção do keyframes,
+    alternate: Alterna entre a sequencia normal e a reverse(reverte a sequencia)
+    */
+    animation-direction: reverse;
+    
+    /*
+    forwards: Quando termina a animação mantém o ultimo frame
+    backwards: Carrega a pagina com a animação no seu primeiro frame
+    both: faz ambos acima
+    */
+    animation-fill-mode: backwards;
+
+
+}

@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+
+    align-items: flex-end;
+
+    background-color: darkgray;
+    height: 600px;
+    color: white;
+}
+
+.r1 {
+    order: 1;
+    background-color: red;
+}
+
+.r2 {
+    background-color: blue;
+    /* Não pode encolher (com o valor 0)*/
+    flex-shrink: 0;
+}
+
+.r3 {
+    align-self: stretch;
+    /* Pode ou não espandir, ou ser atribuido um tamanho maior */
+    flex-grow: 1;
+
+    background-color: green;
+}
+
+.rect{
+    width: 150px;
+    height: 150px;
+}

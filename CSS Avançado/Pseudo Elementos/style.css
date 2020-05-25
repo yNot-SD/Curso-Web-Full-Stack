@@ -1,0 +1,21 @@
+p::first-letter {
+    color: red;
+    font-size: 5rem;
+}
+
+p::first-line{
+    color: blue;
+}
+
+li{
+    list-style: none;
+}
+
+li::before{
+    content: "A";
+}
+
+p::selection{
+    background-color: yellow;
+    color: rgb(165, 0, 0);
+}
