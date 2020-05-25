@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function change(i) {
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.innerText = i.value;
+        }
+
+        function hideH1(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            let div = document.getElementsByTagName("div")[0]
+            h1.style.display = "none";
+            div.style.backgroundColor = "red"
+        }
+    </script>
+
+    <style>
+        div {
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            background-color: blue;
+            color: antiquewhite;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Clique abaixo</h1>
+
+    <div onclick="hideH1()">Click</div>
+
+</body>
+</html>
