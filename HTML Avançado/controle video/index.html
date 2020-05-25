@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <style>
+        .container{
+            position: relative;
+            width: 440px;
+            height: 360px;
+        }
+
+        .video{
+            width: 100%;
+            height: 100%;
+        }
+        .control{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: none;
+        }
+
+        .btn {
+            transform: translateY(-100%);
+            top: 100%;
+            position: relative;
+            padding: 10px;
+            width: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <video id="video1" class="video" onmouseover="btns()" onmouseout="btnsOut()" src="./Assets/WhatsVideo.mp4" ></video>
+
+        <div class="control">
+            <img class="btn" onclick="retroceder()" src="./Assets/controls/btn_30_Backward-512.png">
+            <img class="btn" onclick="avancar()" src="./Assets/controls/btn_30_Forward-512.png">
+            
+            <img class="btn" onclick="play()" src="./Assets/controls/btn_Play-512.png">
+            <img class="btn" onclick="stop()" src="./Assets/controls/btn_Stop-512.png">
+
+            <img class="btn" onclick="baixar()" src="./Assets/controls/btn_Volume_25-512.png">
+            <img class="btn" onclick="aumentar()" src="./Assets/controls/btn_Volume_100-512.png">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

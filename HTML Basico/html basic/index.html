@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .box-saldo{
+        position: relative;
+        width: 350px;
+        height: 200px;
+        border: 2px dashed black;
+        text-align: center;
+    }
+
+    .saldo{
+        top: 40%;
+    }
+    
+    .saldo-comprometido{
+        top: 55%;
+        color: red;
+    }
+
+    .align{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .text-comprometido{
+        top: 64%;
+        color: gray;
+
+    }
+</style>
+
+<body>
+    <div class="box-saldo">
+        <div class="align saldo">
+            R$ SALDO
+        </div>
+        <div class="align saldo-comprometido">
+            R$
+        </div>
+        <div class="align text-comprometido">
+            comprometido
+        </div>
+    </div>
+</body>
+</html>
