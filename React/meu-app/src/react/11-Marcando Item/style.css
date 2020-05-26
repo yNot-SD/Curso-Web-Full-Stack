@@ -1,0 +1,9 @@
+img{
+    height: 15px;
+    width: 15px;
+    right: auto;
+}
+
+.done {
+    text-decoration: line-through;
+}
