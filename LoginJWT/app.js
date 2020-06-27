@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const userRouter = require('./routes/userRouter');
 const mongoose = require("mongoose")
+const admin = require("./routes/adminRouter")
 
 mongoose.connect(process.env.MONGO_CONNECTION_URL,
     {
@@ -18,5 +19,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL,
     })
 
 app.use('/user', express.json(), userRouter);
+
+app.use('/admin', admin)
 
 app.listen(process.env.PORT, () => { console.log("Server running") })

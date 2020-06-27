@@ -5,8 +5,8 @@ const jwt = require("jsonwebtoken")
 const userController = {
     register: async function (req, res) {
 
-        const selectedUser = await User.findOne({email:req.body.email})
-        if(selectedUser) return res.status(400).send('Email alredy exists')
+        const selectedUser = await User.findOne({ email: req.body.email })
+        if (selectedUser) return res.status(400).send('Email alredy exists')
 
         const user = new User({
             name: req.body.name,
@@ -22,18 +22,17 @@ const userController = {
         }
     },
     login: async function (req, res) {
-        const selectedUser = await User.findOne({email:req.body.email})
-        if(!selectedUser) return res.status(400).send('Email or password incorrect')
+        const selectedUser = await User.findOne({ email: req.body.email })
+        if (!selectedUser) return res.status(400).send('Email or password incorrect')
 
         const passwordAndUserMatch = bcrypt.compareSync(req.body.password, selectedUser.password)
-        if(!passwordAndUserMatch) return res.status(400).send('Email or password incorrect')
+        if (!passwordAndUserMatch) return res.status(400).send('Email or password incorrect')
 
-        const token = jwt.sign({_id: selectedUser}, process.env.TOKEN_SECRET)
+        const token = jwt.sign({ _id: selectedUser, admin: selectedUser.admin }, process.env.TOKEN_SECRET)
 
         res.header('authoriztion-token', token)
-
         res.send("User logged")
-        
+
 
     }
 }
