@@ -4,6 +4,10 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const posts = require('../posts')
 
+const options = {
+    origin: "http://localhost:3000"
+}
+
 router.use(cors());
 
 router.get("/all", (res, req) => {
