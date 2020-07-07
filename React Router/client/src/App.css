@@ -1,0 +1,32 @@
+.nav{
+  color: whitesmoke;
+  background-color: gray;
+  padding: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-links lii{
+  margin-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0;
+}
+
+.aulas{
+  font-size: 20px;
+  list-style: none;
+}
+
+.page{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.link{ color: gray;}
