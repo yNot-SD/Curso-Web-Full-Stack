@@ -1,12 +1,12 @@
 module.exports = {
     development: {
         database: {
-            host: 'localhost',
-            port: 3306,
-            name: 'cursoNodeMySQL',
-            dialect: 'mysql',
+            name: 'root',
             user: 'root',
-            passoword: 'root'
+            passoword: 'root',
+            host: 'localhost',
+            dialect: 'mysql',
+            port: 3306
         }
     },
     production: {

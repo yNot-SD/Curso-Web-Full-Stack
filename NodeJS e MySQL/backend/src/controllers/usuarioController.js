@@ -1,6 +1,7 @@
 const Usuario = require('../models/usuario')
 const status = require('http-status');
 
+//inserir os dados no banco
 exports.Insert = (req, res, next) => {
     const nome = req.body.nome;
     const salario = req.body.salario;
